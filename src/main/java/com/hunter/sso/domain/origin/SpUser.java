@@ -1,4 +1,4 @@
-package com.hunter.sso.domain;
+package com.hunter.sso.domain.origin;
 
 import java.math.BigDecimal;
 import java.util.Date;
