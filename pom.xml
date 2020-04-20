@@ -65,6 +65,31 @@
         <!--redis end-->
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>nexus local repository</name>
+            <url>http://nexus.ubuntu.com/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus Repository Aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
