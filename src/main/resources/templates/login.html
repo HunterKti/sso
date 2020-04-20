@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<style>
+    .align-right{
+        text-align: right;
+    }
+</style>
+<body>
+    <div align="center" style="margin-top: 50px">
+        <form action="/login" method="post">
+            <input th:value="${url}" name="url" type="hidden">
+            <table>
+                <th:block th:if="${user != null}">
+                    <tr>
+                        <td class="align-right">欢迎：</td>
+                        <td>
+                            <span th:text="${user.username}"></span>
+                        </td>
+                    </tr>
+                </th:block>
+                <tr>
+                    <td class="align-right">用户名：</td>
+                    <td style="width: 300px"><input name="username"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">密码：</td>
+                    <td><input name="password"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">登陆</button>
+                    </td>
+                    <td>
+                        <span style="color:red" th:text="${message}"></span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
